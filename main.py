@@ -1,12 +1,14 @@
 import asyncio
-import os
+import logging
+# import os
 
 from aiogram import Bot, types, Dispatcher
 from aiogram.filters import CommandStart
 from beast import Beastiary
 
 
-TOKEN = os.getenv('TOKEN')
+# TOKEN = os.getenv('TOKEN')
+TOKEN = open('token.txt').read()
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 chats = {}
@@ -30,4 +32,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == '__main__':
+    logging.info('Service started')
     asyncio.run(main())

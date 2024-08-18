@@ -6,12 +6,3 @@ services:
     build: .
     container_name: biter
     tty: true
-    secrets:
-      - token
-    environment:
-      TOKEN: token
-    restart: unless-stopped
-
-secrets:
-  token:
-    file: ./token.txt

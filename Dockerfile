@@ -1,6 +1,5 @@
 FROM python:3.12-slim
 
-ARG TOKEN
 WORKDIR /app
 COPY . .
 
