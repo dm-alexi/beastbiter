@@ -8,7 +8,7 @@ from beast import Beastiary
 
 
 # TOKEN = os.getenv('TOKEN')
-TOKEN = open('token.txt').read()
+TOKEN = open('token.txt').read().strip()
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 chats = {}
